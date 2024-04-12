@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #7ec6f6, #bf6ddf);
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.container .title {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+    margin: 15px 0 10px 0;
+}
+
+.container .title::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #7ec6f6, #bf6ddf);
+}
+
+.container .form {
+    padding-bottom: 15px;
+}
+
+.form .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.form .half-row {
+    width: calc(100% / 2 - 5px);
+    position: relative;
+}
+
+.form .form-row .details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.form .form-row input {
+    width: 100%;
+    height: 30px;
+    outline: none;
+    font-size: 14px;
+    border-radius: 5px;
+    padding-left: 10px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.form .form-row input:hover,
+.form .form-row textarea:hover {
+    border: 2px solid #b6b6b6;
+}
+
+.form .form-row input:focus,
+.form .form-row input:valid,
+.form .form-row textarea:focus,
+.form .form-row textarea:valid {
+    border-color: #bf6ddf;
+}
+
+.form .password-field,
+.form .con-password-field {
+    height: 30px;
+    position: relative;
+}
+
+.form .password-field i,
+.form .con-password-field i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #919191;
+    cursor: pointer;
+}
+
+.form .gender-details .gender-title {
+    font-weight: 500;
+}
+.form .gender-details .category {
+    width: 80%;
+    margin: 10px 0;
+}
+
+.form .category label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.form input[type="radio"] {
+    display: none;
+}
+
+.form .category label .dot {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    margin-right: 10px;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two,
+#dot-3:checked ~ .category label .three {
+    border-color: #d9d9d9;
+    background-color: #bf6ddf;
+}
+
+.form .form-row textarea {
+    width: 100%;
+    height: 60px;
+    outline: none;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    max-height: 120px;
+    resize: none;
+    caret-color: #c444f6;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+}
+
+textarea::-webkit-scrollbar {
+    width: 0;
+}
+
+.form .form-row .dropdown {
+    font-weight: 500;
+}
+
+.form .form-row select {
+    outline: none;
+    padding: 6px 5px;
+    border: 1px solid #b6b6b6;
+    border-bottom-width: 2px;
+    color: #525252;
+    border-radius: 5px;
+    appearance: none;
+}
+
+.form .form-row option {
+    font-size: 12px;
+}
+
+.form .button {
+    width: 100%;
+    height: 40px;
+    margin-top: 15px;
+}
+
+.form .button input {
+    width: 100%;
+    height: 95%;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: #fff;
+    background: linear-gradient(135deg, #7ec6f6, #bf6ddf);
+    transition: all 0.3s ease;
+}
+
+.form .button input:hover {
+    background: linear-gradient(-135deg, #7ec6f6, #bf6ddf);
+}
+
+.form .email-error {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 3px;
+    font-size: 18px;
+    padding: 2px 0 4px 0;
+    color: rgb(251, 49, 49);
+    line-height: 0.2;
+    visibility: hidden;
+}
+
+.form .email-error.invalid {
+    visibility: visible;
+}
+
+.form .email-error .error-text {
+    font-size: 13px;
+}
+
+.form .password-error,
+.form .con-password-error {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 3px;
+    font-size: 18px;
+    padding-top: 10px;
+    color: rgb(251, 49, 49);
+    line-height: 0.2;
+    visibility: hidden;
+}
+
+.form .password-error .error-p-text,
+.form .con-password-error .error-p-text {
+    font-size: 12px;
+}
+
+.form .password-error.invalid,
+.form .con-password-error.invalid {
+    visibility: visible;
+}
+
+@media (max-width: 600px) {
+    .container {
+        max-width: 100%;
+    }
+    .form .form-row .half-row {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .form .category {
+        width: 100%;
+    }
+
+    .form {
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+
+    .form::-webkit-scrollbar {
+        width: 5px;
+    }
+}
